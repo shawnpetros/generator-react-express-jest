@@ -1,8 +1,13 @@
 {
   "name": "generator-react-express-jest",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DutchRican/generator-react-express-jest.git"
+  },
+  "homepage": "https://github.com/DutchRican/generator-react-express-jest",
   "description":
-    "Generator for a React app on Express using webpack and Jest for testing",
+    "Yeoman Generator for a React app on Express using webpack and Jest for testing",
   "author": {
     "name": "Paul van Woensel"
   },
@@ -67,6 +72,5 @@
     },
     "plugins": ["prettier"]
   },
-  "repository": "DutchRican/generator-react-express-jest",
   "license": "ISC"
 }
