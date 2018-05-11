@@ -1,17 +1,16 @@
 {
   "name": "generator-react-express-jest",
-  "version": "0.0.0",
-  "description": "Generator for a React app on Express using webpack and Jest for testing",
+  "version": "0.1.0",
+  "description":
+    "Generator for a React app on Express using webpack and Jest for testing",
   "homepage": "",
   "author": {
     "name": "Paul van Woensel",
     "email": "",
     "url": ""
   },
-  "files": [
-    "generators"
-  ],
-  "main": "generators/index.js",
+  "files": ["generators"],
+  "main": "generators/app/index.js",
   "keywords": [
     "React",
     "Express",
@@ -51,20 +50,11 @@
     "test": "jest"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.json": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.js": ["eslint --fix", "git add"],
+    "*.json": ["prettier --write", "git add"]
   },
   "eslintConfig": {
-    "extends": [
-      "xo",
-      "prettier"
-    ],
+    "extends": ["xo", "prettier"],
     "env": {
       "jest": true,
       "node": true
@@ -78,9 +68,7 @@
         }
       ]
     },
-    "plugins": [
-      "prettier"
-    ]
+    "plugins": ["prettier"]
   },
   "repository": "DutchRican/generator-react-express-jest",
   "license": "ISC"
