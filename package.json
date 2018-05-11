@@ -3,11 +3,8 @@
   "version": "0.1.0",
   "description":
     "Generator for a React app on Express using webpack and Jest for testing",
-  "homepage": "",
   "author": {
-    "name": "Paul van Woensel",
-    "email": "",
-    "url": ""
+    "name": "Paul van Woensel"
   },
   "files": ["generators"],
   "main": "generators/app/index.js",
