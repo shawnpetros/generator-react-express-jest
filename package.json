@@ -12,7 +12,7 @@
     "name": "Paul van Woensel"
   },
   "files": ["generators"],
-  "main": "generators/app/index.js",
+  "main": "generators/index.js",
   "keywords": [
     "React",
     "Express",
