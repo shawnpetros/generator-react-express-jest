@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Paul van Woensel",
+      "authorEmail": "",
+      "authorUrl": ""
+    }
+  }
+}
