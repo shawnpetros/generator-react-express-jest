@@ -1,12 +1,14 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
-import { AppContainer } from './containers/';
+import { Route, Switch } from 'react-router-dom';
+import { Header, Footer } from './components';
+import { HomeScreen } from './containers/';
 
 export default () => (
-  <BrowserRouter>
+  <React.Fragment>
+    <Header />
     <Switch>
-      <Route path="/" component={AppContainer} />
+      <Route path="/" component={HomeScreen} />
     </Switch>
-  </BrowserRouter>
+    <Footer />
+  </React.Fragment>
 );

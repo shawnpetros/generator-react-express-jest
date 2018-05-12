@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { Example } from '../../components';
-import { exampleAction } from '../../redux/actions/example';
 
-class AppContainer extends Component {
+class HomeScreen extends Component {
   componentDidMount() {
-    this.props.exampleAction();
+ //   this.props.exampleAction();
   }
 
   render() {
@@ -20,10 +19,4 @@ class AppContainer extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    example: state.exampleReducer
-  };
-};
-
-export default connect(mapStateToProps, { exampleAction })(AppContainer);
+export default connect()(HomeScreen);
