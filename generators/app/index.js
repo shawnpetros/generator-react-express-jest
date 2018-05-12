@@ -8,7 +8,7 @@ module.exports = class extends Generator {
     // Have Yeoman greet the user.
     this.log(
       yosay(
-        `Welcome to the polished ${chalk.red('generator-react-express-jest')} generator!`
+        `Welcome to the polished ${chalk.red('react-express-jest')} generator!`
       )
     );
 
@@ -16,13 +16,12 @@ module.exports = class extends Generator {
       {
         type: 'input',
         name: 'name',
-        author: 'author',
         message: 'Your project name',
         default: this.appname
       },
       {
         type: 'input',
-        author: 'author',
+        name: 'author',
         message: 'Author name?'
       }
     ];
