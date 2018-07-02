@@ -5,23 +5,16 @@
   "main": "app.js",
   "scripts": {
     "start": "node ./src/server/app.js",
-    "start:dev": "nodemon --exec npm run build:dev",
+    "start:dev": "nodemon --ignore 'www/' --exec npm run build:dev",
     "build": "webpack --config ./config/webpack.config.js",
-    "build:dev": "webpack --config ./config/webpack.config.js && node ./src/server/app.js",
+    "build:dev":
+      "webpack --config ./config/webpack.config.js && node ./src/server/app.js",
     "test": "jest --forceExit"
   },
   "babel": {
-    "presets": [
-      "react",
-      "env"
-    ]
+    "presets": ["react", "env"]
   },
-  "keywords": [
-    "react",
-    "express",
-    "node",
-    "webpack"
-  ],
+  "keywords": ["react", "express", "node", "webpack"],
   "author": "<%= author %>",
   "license": "ISC",
   "dependencies": {
@@ -75,9 +68,6 @@
   },
   "nodemonConfig": {
     "ext": "js, jsx, scss, css, json",
-    "ignore": [
-      "./www",
-      "*.test.js"
-    ]
+    "ignore": ["./www", "*.test.js"]
   }
 }

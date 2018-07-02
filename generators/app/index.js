@@ -7,9 +7,7 @@ module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(
-      yosay(
-        `Welcome to the polished ${chalk.red('react-express-jest')} generator!`
-      )
+      yosay(`Welcome to the polished ${chalk.red('react-express-jest')} generator!`)
     );
 
     const prompts = [
@@ -41,6 +39,7 @@ module.exports = class extends Generator {
         author: this.props.author
       }
     );
+    this.fs.copy(this.templatePath('README.md'), this.destinationPath('README.md'));
     this.fs.copy(this.templatePath('_config'), this.destinationPath('config'));
 
     this.fs.copy(this.templatePath('_jestSetup'), this.destinationPath('jestSetup'));

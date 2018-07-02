@@ -3,6 +3,7 @@
 const express = require('express');
 const app = express();
 const { resolve } = require('path');
+const http = require('http');
 const server = require('./');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
@@ -24,7 +25,8 @@ app.use(express.static(resolve(__dirname, '..', '..', 'www')))
 // request any page and receive index.html
 app.get('*', (req, res) => res.sendFile(resolve(__dirname, '..', '..', 'www/index.html')));
 
+const httpServer = http.createServer(app);
 // server listening!
-app.listen(process.env.PORT || 3000, () => {
+httpServer.listen(process.env.PORT || 3000, () => {
   console.log(chalk.cyan('Server is listening'), chalk.yellow('http://localhost:3000'));
 });
