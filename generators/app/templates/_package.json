@@ -5,14 +5,14 @@
   "main": "app.js",
   "scripts": {
     "start": "node ./src/server/app.js",
-    "start:dev": "nodemon --ignore 'www/' --exec npm run build:dev",
+    "start:dev": "nodemon --exec npm run build:dev",
     "build": "webpack --config ./config/webpack.config.js",
     "build:dev":
       "webpack --config ./config/webpack.config.js && node ./src/server/app.js",
     "test": "jest --forceExit"
   },
   "babel": {
-    "presets": ["react", "env"]
+    "presets": ["react", "env", "stage-3"]
   },
   "keywords": ["react", "express", "node", "webpack"],
   "author": "<%= author %>",
@@ -34,6 +34,7 @@
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
     "chalk": "^2.1.0",
     "css-loader": "^0.28.0",
     "enzyme": "^3.3.0",
@@ -51,8 +52,8 @@
     "jest": "^22.4.3",
     "jest-junit": "^3.7.0",
     "morgan": "^1.8.1",
-    "node-sass": "^4.5.2",
-    "nodemon": "^1.11.0",
+    "node-sass": "^4.9.2",
+    "nodemon": "^1.17.5",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",
@@ -68,6 +69,6 @@
   },
   "nodemonConfig": {
     "ext": "js, jsx, scss, css, json",
-    "ignore": ["./www", "*.test.js"]
+    "ignore": ["www/", "*.test.js"]
   }
 }
