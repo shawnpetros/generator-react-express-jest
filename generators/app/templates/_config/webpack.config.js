@@ -10,6 +10,7 @@ const contextPath = path.resolve(__dirname, '..', 'src', 'client');
 module.exports = {
   context: contextPath,
   entry: ['./app.js'],
+  mode: 'development',
   output: {
     path: outputPath,
     filename: 'bundle.js'
@@ -20,10 +21,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: {
-          presets: ['react', 'env']
-        }
+        loader: 'babel-loader'
       }, {
         test: /\.(scss|sass)$/,
         loader: [

@@ -1,9 +1,7 @@
 import React from 'react';
 
-export const Footer = () => {
-  return (
+export const Footer = () => (
     <footer>
-      <a href="#" target="_self">Contact us!</a>
+        <a href="#" target="_self">Contact us!</a>
     </footer>
-  );
-};
+);

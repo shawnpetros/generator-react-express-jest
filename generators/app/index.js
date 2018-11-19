@@ -41,6 +41,9 @@ module.exports = class extends Generator {
     );
     this.fs.copy(this.templatePath('README.md'), this.destinationPath('README.md'));
     this.fs.copy(this.templatePath('_config'), this.destinationPath('config'));
+    this.fs.copy(this.templatePath('_eslintrc'), this.destinationPath('.eslintrc'));
+    this.fs.copy(this.templatePath('_gitignore'), this.destinationPath('.gitignore'));
+
 
     this.fs.copy(this.templatePath('_jestSetup'), this.destinationPath('jestSetup'));
 
