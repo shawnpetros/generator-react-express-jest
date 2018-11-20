@@ -1,5 +1,5 @@
 {
-  "name": "genUpdate",
+  "name": "<%= name %>",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -22,7 +22,7 @@
     "node",
     "webpack"
   ],
-  "author": "",
+  "author": "<%= author %>",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
